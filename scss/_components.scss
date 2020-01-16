@@ -1,0 +1,36 @@
+$color-white: #fff;
+$color-black: rgb(53, 50, 50);
+$color-primary: rgb(201, 92, 92);
+@mixin title{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    h3{
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: $color-black;
+        padding-bottom: 7px;
+    }
+    p{
+        font-size: 1rem;
+        color: #7a838b;
+        line-height: 0.9rem;
+        font-weight: 400;
+    }
+}
+
+@mixin  keyframes {
+    @keyframes example {
+        20% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-40px);
+        }
+        90% {
+            transform: translateY(-80px);
+        }
+    }
+}

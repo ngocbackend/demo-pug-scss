@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="../scss/main.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+       
+        
+    body
+        header
+            nav.menu
+                div.menu_left
+                    h1: a(href="#") who
+                        span iam
+                div.menu_right
+                    label(for="menu_toggle"): i(class="fa fa-bars")
+                    input(type="checkbox" id="menu_toggle")
+                    ul#menu_ul
+                        li: a(href="#") Home 
+                        li: a(href="#") About 
+                        li: a(href="#") Blog 
+                        li: a(href="#") Service 
+                        li: a(href="#") Contact 
+        section.banner
+            div.banner_content
+                div.banner_content_left
+                    div.banner_content_left_text  
+                        h1 A CLEAN AND MODERN LOOKING REPONSIVE WEBSITE
+                        p Buit with great love 
+                    div.banner_content_left_btn
+                        button Dowload
+                        span.transform
+                            span.list
+                                span.text Home
+                                span.text About
+                                span.text Contact
+                div.banner_content_right
+                    img(src="../img/iphone-header.png" alt="phone header")  
+        div.title
+            h3 Popular Destination
+            p Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.
+            -var list_popular = [{ img: '1.png',name: 'Italy',places: '7'},{ img: '2.png',name: 'Brazil',places:'3' },{ img: '3.png',name: 'America',places:'10' },{ img: '4.png',name: 'Nepal',places:'2' },{ img: '5.png',name: 'Maldives',places:'2'},{ img: '6.png',name: 'Indonesia',places:'5'}]
+        mixin popular(list_popular)
+            each val in list_popular
+                div.popular_item
+                    img(src="../img/" + val.img)
+                    p= val.name
+       
+        section.popular
+            +popular(list_popular)  
+        div.title
+            h3 Service
+            p Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.
+        -var list_service = [{i: 'fa fa-desktop',name: 'Comfortable Journey',content: 'A wonderful serenity has taken to the possession of my entire soul.'},{i: 'fa fa-wifi',name: 'Luxuries Hotel',content: 'A wonderful serenity has taken to the possession of my entire soul.'},{i: 'fa fa-mobile',name: 'Travel Guide',content: 'A wonderful serenity has taken to the possession of my entire soul.'}]
+        mixin service(list_service)
+            each item in list_service
+                div.service_item
+                    i(class=item.i)
+                    h4= item.name
+                    p= item.content
+        section.service
+            +service(list_service) 
+        footer
+            p Copyright ©2020 All rights reserved | This template is made with  by Colorlib  
+        script 
